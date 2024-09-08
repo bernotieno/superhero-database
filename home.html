@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Superhero Database</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Superhero Database</h1>
+    <div class="controls">
+        <input type="text" id="search" placeholder="Search by name...">
+        <select id="pageSize">
+            <option value="10">10 per page</option>
+            <option value="20" selected>20 per page</option>
+            <option value="50">50 per page</option>
+            <option value="100">100 per page</option>
+            <option value="all">All results</option>
+        </select>
+    </div>
+    <table id="heroTable">
+        <thead>
+            <tr>
+                <th data-sort="icon">Icon</th>
+                <th data-sort="name">Name</th>
+                <th data-sort="fullName">Full Name</th>
+                <th data-sort="intelligence">Intelligence</th>
+                <th data-sort="strength">Strength</th>
+                <th data-sort="speed">Speed</th>
+                <th data-sort="durability">Durability</th>
+                <th data-sort="power">Power</th>
+                <th data-sort="combat">Combat</th>
+                <th data-sort="race">Race</th>
+                <th data-sort="gender">Gender</th>
+                <th data-sort="height">Height</th>
+                <th data-sort="weight">Weight</th>
+                <th data-sort="placeOfBirth">Place Of Birth</th>
+                <th data-sort="alignment">Alignment</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div class="pagination">
+        <button id="prevPage">Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage">Next</button>
+    </div>
+
+    <script type="module" src="superheroDatabase.js"></script>
+</body>
+</html>
