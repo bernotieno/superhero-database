@@ -110,8 +110,15 @@ export function renderTable() {
     const pageHeroes = filteredHeroes.slice(start, end);
 
     tableBody.innerHTML = '';
-    pageHeroes.forEach(hero => {
+
+    pageHeroes.forEach((hero, index) => {
         const row = document.createElement('tr');
+
+        // Animation and styling applied here
+        row.style.opacity = 0;
+        row.style.transform = 'translateY(20px)';
+        row.style.transition = `opacity 0.5s ease-in ${index * 0.05}s, transform 0.5s ease-in ${index * 0.05}s`;
+
         row.innerHTML = `
             <td><img src="${hero.images.xs}" alt="${hero.name}"></td>
             <td>${hero.name}</td>
@@ -129,7 +136,14 @@ export function renderTable() {
             <td>${hero.biography.placeOfBirth || ''}</td>
             <td>${hero.biography.alignment || ''}</td>
         `;
+
         tableBody.appendChild(row);
+
+        // Trigger animation after appending the row
+        requestAnimationFrame(() => {
+            row.style.opacity = 1;
+            row.style.transform = 'translateY(0)';
+        });
     });
 
     updatePagination();

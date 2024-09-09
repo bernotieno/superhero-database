@@ -1,0 +1,95 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Controls (search and page size) */
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#search {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    width: 250px;
+}
+
+#pageSize {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Table styles */
+table {
+    width: 90%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+thead {
+    background-color: #333;
+    color: #fff;
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    cursor: pointer;
+}
+
+td img {
+    width: 40px;
+    height: auto;
+    border-radius: 50%;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+#prevPage, #nextPage {
+    padding: 10px 15px;
+    margin: 0 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+#prevPage:disabled, #nextPage:disabled {
+    background-color: #888;
+    cursor: not-allowed;
+}
+
+#pageInfo {
+    font-size: 16px;
+}
