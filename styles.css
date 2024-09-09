@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     color: #333;
+
     margin: 0;
     padding: 0;
 }
@@ -84,6 +85,15 @@ tbody tr:nth-child(even) {
     border-radius: 4px;
     font-size: 16px;
 }
+/* Distinct lines between superhero entries */
+tbody tr {
+    border-bottom: 2px solid #ccc; /* Adjust thickness and color as needed */
+}
+
+tbody tr:last-child {
+    border-bottom: none; /* Remove border from the last row if needed */
+}
+
 
 #prevPage:disabled, #nextPage:disabled {
     background-color: #888;
@@ -93,3 +103,15 @@ tbody tr:nth-child(even) {
 #pageInfo {
     font-size: 16px;
 }
+
+/* Hover styles for table headers */
+th:hover {
+    background-color: #555; /* Darker color on hover */
+    color: #fff;
+}
+
+/* Hover styles for pagination buttons */
+#prevPage:hover, #nextPage:hover {
+    background-color: #555; /* Darker color on hover */
+}
+
